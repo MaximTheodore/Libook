@@ -55,16 +55,19 @@ namespace Libook
 
             foreach (var reservation in reservationData)
             {
-
                 var choosenBook = choosenBooksTableAdapter.GetData().FindByid_choosenbooks(reservation.id_choosenbooks);
 
+                if (choosenBook != null)
+                {
+                    var book = bookTableAdapter.GetData().FindByid_book(choosenBook.id_book);
+                    var user = usersTableAdapter.GetData().FindByid_user(choosenBook.id_user);
 
-                var book = bookTableAdapter.GetData().FindByid_book(choosenBook.id_book);
-
-                var user = usersTableAdapter.GetData().FindByid_user(choosenBook.id_user);
-
-                var userInfo = userInfoTableAdapter.GetData().FindByid_userinfo(user.id_user);
-                dataTable.Rows.Add(userInfo.name+" "+"("+choosenBook.id_choosenbooks+")", book.title, reservation.startreservation.ToString("dd-MM-yyyy"), reservation.endreservation.ToString("dd-MM-yyyy"));
+                    if (user != null)
+                    {
+                        var userInfo = userInfoTableAdapter.GetData().FindByid_userinfo(user.id_user);
+                        if (userInfo != null) dataTable.Rows.Add(userInfo.name + " " + "(" + choosenBook.id_choosenbooks + ")", book.title, reservation.startreservation.ToString("dd-MM-yyyy"), reservation.endreservation.ToString("dd-MM-yyyy"));
+                    }
+                }
             }
 
             ReservedBooksByreader.ItemsSource = dataTable.DefaultView;
