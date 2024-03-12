@@ -52,7 +52,7 @@ namespace Libook
             dataTable.Columns.Add("End", typeof(string));
 
             var reservationData = reservationBookTableAdapter.GetData();
-
+            int iduser = 0;
             foreach (var reservation in reservationData)
             {
                 var choosenBook = choosenBooksTableAdapter.GetData().FindByid_choosenbooks(reservation.id_choosenbooks);
@@ -64,8 +64,17 @@ namespace Libook
 
                     if (user != null)
                     {
-                        var userInfo = userInfoTableAdapter.GetData().FindByid_userinfo(user.id_user);
-                        if (userInfo != null) dataTable.Rows.Add(userInfo.name + " " + "(" + choosenBook.id_choosenbooks + ")", book.title, reservation.startreservation.ToString("dd-MM-yyyy"), reservation.endreservation.ToString("dd-MM-yyyy"));
+                        foreach (var item in userInfoTableAdapter.GetData())
+                        {
+                            if (item.user_id == user.id_user)
+                            {
+                                iduser = item.id_userinfo;
+                            }
+                        }
+                        var userInfo = userInfoTableAdapter.GetData().FindByid_userinfo(iduser);
+                        if (userInfo != null)
+
+                            dataTable.Rows.Add(userInfo.name + " " + "(" + choosenBook.id_choosenbooks + ")", book.title, reservation.startreservation.ToString("dd-MM-yyyy"), reservation.endreservation.ToString("dd-MM-yyyy"));
                     }
                 }
             }
