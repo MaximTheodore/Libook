@@ -136,7 +136,7 @@
                  >
         </TextBox>
         <Button x:Name="Registrat" 
-                Content="Зарегестрироваться"
+                Content="Зарегистрироваться"
                 Grid.Row="12" 
                 Grid.Column="2"
                 Height="50"

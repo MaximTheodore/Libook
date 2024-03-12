@@ -85,7 +85,7 @@
                 BorderBrush="#FFD4A373" Click="Into_Click">
         </Button>
         <Button x:Name="Registrat" 
-                Content="Зарегестрироваться" 
+                Content="Зарегистрироваться" 
                 Grid.Row="7" Grid.Column="3"
                 Grid.ColumnSpan="2" 
                 Height="50"
