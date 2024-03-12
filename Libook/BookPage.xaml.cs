@@ -171,8 +171,8 @@ namespace Libook
         }
         private void ApplyFilters()
         {
-            int selectedGenreId = (int)FilterGenre.SelectedValue;
-            int selectedARId = (int)FilterAR.SelectedValue;
+            int selectedGenreId = FilterGenre.SelectedValue as int? ?? 0;
+            int selectedARId = FilterAR.SelectedValue as int? ?? 0;
             string searchText = SearchField.Text.ToLower();
 
             BooksListBox.Items.Clear();
@@ -209,6 +209,7 @@ namespace Libook
                 BooksListBox.Items.Add(bookControl);
             }
         }
+
 
         private void SearchField_TextChanged(object sender, TextChangedEventArgs e)
         {

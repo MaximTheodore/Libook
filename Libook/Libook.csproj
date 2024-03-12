@@ -284,7 +284,6 @@
     <Compile Include="MessageReaderPage.xaml.cs">
       <DependentUpon>MessageReaderPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="PasswordHasher.cs" />
     <Compile Include="RegistrationPage.xaml.cs">
       <DependentUpon>RegistrationPage.xaml</DependentUpon>
     </Compile>
