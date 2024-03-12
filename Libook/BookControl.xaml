@@ -1,0 +1,77 @@
+﻿<UserControl x:Class="Libook.BookControl1"
+                   xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Libook"
+             mc:Ignorable="d" 
+             d:DesignHeight="200" d:DesignWidth="250" Background="#faf0e6">
+    <Grid>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <TextBlock
+            x:Name="idBook"
+            Visibility="Hidden"
+            />
+        <Image
+            x:Name="ImgBookCard"
+            Grid.Column="1"
+            Grid.ColumnSpan="3"
+            Grid.Row="1"
+            Grid.RowSpan="2"
+            Width="100"
+            />
+        <TextBlock
+            x:Name="NameBookCard"
+            Text="Name book"
+            Grid.Column="1"
+            Grid.Row="3"
+            Grid.ColumnSpan="3"
+            VerticalAlignment="Center"
+            HorizontalAlignment="Center"
+            />
+        <TextBlock
+            x:Name="AuthorBookCard"
+            Text="Author"
+            Grid.Column="1"
+            Grid.Row="4"
+            Grid.ColumnSpan="3"
+            VerticalAlignment="Center"
+            HorizontalAlignment="Center"
+            />
+        <Button
+            x:Name="Deletebtn"
+            Grid.Column="4"
+            
+            
+            Height="40"
+            Width="50" Grid.ColumnSpan="2" Click="Deletebtn_Click"
+            >
+            <materialDesign:PackIcon Kind="Delete" Height="20" Width="40" HorizontalAlignment="Center" VerticalAlignment="Center"  />
+        </Button>
+        <Button
+            x:Name="LocalInfobtn"
+            Grid.Column="4"
+            Grid.Row="1"
+            
+            Height="40"
+            Width="50" Grid.ColumnSpan="2"
+            >
+            <materialDesign:PackIcon Kind="ExportVariant" Height="20" Width="20" HorizontalAlignment="Center" VerticalAlignment="Center"  />
+        </Button>
+    </Grid>
+</UserControl>

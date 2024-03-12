@@ -1,0 +1,97 @@
+﻿<Page x:Class="Libook.BookAddPage2"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+      xmlns:local="clr-namespace:Libook"
+      mc:Ignorable="d" 
+      d:DesignHeight="600" d:DesignWidth="600"
+      Title="BookAddPage2">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <TextBlock
+            Grid.Column="0"
+            Grid.Row="2"
+            Grid.ColumnSpan="2"
+            Text="Дабавление книги (расположение)"
+            VerticalAlignment="Center"
+            HorizontalAlignment="Center"
+            />
+       
+        <TextBlock
+            Grid.Column="0"
+            Grid.Row="3"
+            Text="Название книги"
+            VerticalAlignment="Center"
+            HorizontalAlignment="Right"
+
+            />
+      
+        <TextBox
+            x:Name="NameBookCombox"
+             Grid.Column="1"
+             Grid.Row="3"
+             Margin="10"
+            />
+        <TextBlock
+            Grid.Column="0"
+            Grid.Row="4"
+            Text="Расположение книги"
+            VerticalAlignment="Center"
+            HorizontalAlignment="Right"
+          
+            />
+        <TextBox
+           x:Name="LocationBox"
+           Grid.Column="1"
+           Grid.Row="4"
+           Margin="10"
+           
+        />
+        <TextBlock
+            Grid.Column="0"
+            Grid.Row="5"
+            Text="Статус книги"
+            VerticalAlignment="Center"
+            HorizontalAlignment="Right"
+                
+            />
+        <TextBox
+             x:Name="StatusBook"
+             Grid.Column="1"
+             Grid.Row="5"
+             Margin="10"
+              />
+       
+        <Button
+            x:Name="Savebtn"
+            Content="Сохранить"
+            Grid.Row="6"
+            Grid.ColumnSpan="2"
+            Margin="200 0 200 0"
+            Height="50" Click="Savebtn_Click"
+        
+            />
+
+    </Grid>
+</Page>

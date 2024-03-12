@@ -1,0 +1,48 @@
+﻿<UserControl x:Class="Libook.AuthorControl"
+                   xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Libook"
+             mc:Ignorable="d" 
+             d:DesignHeight="140" d:DesignWidth="550" Background="#faf0e6">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Image
+            x:Name="ImgAuthorCard"
+            Grid.RowSpan="2"
+            Margin="20"
+            />
+        <TextBlock
+            x:Name="NameAuthorCard"
+            Text="Name user"
+            Grid.Column="1"
+            Grid.RowSpan="2"
+            VerticalAlignment="Center"
+            HorizontalAlignment="Center"
+            />
+        <TextBlock
+            x:Name="AuthorIdtxt"
+            Visibility="Hidden"
+            />
+        <Button
+            x:Name="DeleteAuthorbtn"
+            Grid.Column="2"
+            Height="50"
+            Width="50"
+            VerticalAlignment="Top"
+            HorizontalAlignment="Right" Click="DeleteAuthorbtn_Click"
+            >
+            <materialDesign:PackIcon Kind="Delete" Height="26" Width="75" HorizontalAlignment="Center" VerticalAlignment="Center"  />
+        </Button>
+    </Grid>
+</UserControl>

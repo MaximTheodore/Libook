@@ -1,0 +1,110 @@
+﻿<Page x:Class="Libook.ReservedReaderPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+      xmlns:local="clr-namespace:Libook"
+      mc:Ignorable="d" 
+      d:DesignHeight="600" d:DesignWidth="600"
+      Title="ReservedReaderPage">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <TextBlock 
+            Text="Бронирование книги"
+            Grid.Column="1"
+            Grid.Row="1"
+            VerticalAlignment="Center"
+            HorizontalAlignment="Center"
+            /> 
+        <TextBlock 
+            Text="Название книги"
+            Grid.Column="1"
+            Grid.Row="2"
+            VerticalAlignment="Center"
+            HorizontalAlignment="Left"
+            Margin="10"
+            />
+        <ComboBox
+            x:Name="NamebookCombo"
+            Grid.Column="1"
+            Grid.Row="3"
+            Margin="10" SelectionChanged="NamebookCombo_SelectionChanged"
+            />
+        <TextBlock 
+              Text="Цель выбора"
+              Grid.Column="1"
+              Grid.Row="4"
+              VerticalAlignment="Center"
+              HorizontalAlignment="Left"
+              Margin="10"
+              />
+        <TextBox
+            x:Name="TypechooseCombo"
+            Grid.Column="1"
+            Grid.Row="5"
+            Margin="10" 
+            >
+            
+        </TextBox>
+        <TextBlock 
+           Text="Дата резервирования"
+           Grid.Column="1"
+           Grid.Row="6"
+            Grid.ColumnSpan="2"
+           VerticalAlignment="Center"
+           HorizontalAlignment="Left"
+           Margin="10"
+           />
+        <DatePicker
+           x:Name="StartReservedPick"
+            Grid.Column="1"
+            Grid.Row="7"
+            Margin="10"
+            />
+        <TextBlock 
+             Text="Дата окончания бронирования"
+             Grid.Column="1"
+            Grid.ColumnSpan="2"
+             Grid.Row="8"
+             VerticalAlignment="Center"
+             HorizontalAlignment="Left"
+             Margin="10"
+             />
+        <DatePicker
+            x:Name="EndReservedPick"
+              Grid.Column="1"
+              Grid.Row="9"
+              Margin="10"
+              />
+        <Button
+            x:Name="Reservedbtn"
+            Content="Зарезервировать"
+            Grid.Column="1"
+            Grid.Row="10"
+            Grid.RowSpan="2"
+            Height="50"
+            Margin="10" Click="Reservedbtn_Click"
+            />
+    </Grid>
+</Page>
