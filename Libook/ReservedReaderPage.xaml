@@ -49,7 +49,7 @@
             x:Name="NamebookCombo"
             Grid.Column="1"
             Grid.Row="3"
-            Margin="10" SelectionChanged="NamebookCombo_SelectionChanged"
+            SelectionChanged="NamebookCombo_SelectionChanged"
             />
         <TextBlock 
               Text="Цель выбора"
