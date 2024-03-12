@@ -127,7 +127,7 @@ namespace Libook
 
                         var bookStorage = bookStorageTableAdapter.GetData().FindByid_bookstorage(book.id_book);
 
-                        sw.WriteLine($"{book.id_book}\t{book.title}\t{author.nickname}\t{genre}\t{book.published_year}\t{ageRating.name_ar}\t{bookStorage.lidlocation}");
+                        sw.WriteLine($"{book.id_book}\t{book.title}\t{author.nickname}\t{genre.Name_genre}\t{book.published_year}\t{ageRating.name_ar}\t{bookStorage.lidlocation}");
                     }
 
                     MessageBox.Show("Файл успешно записан!", "Success", MessageBoxButton.OK, MessageBoxImage.Information);
